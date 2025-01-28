@@ -1,62 +1,210 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    padding: 40px 0;
-    z-index: 1000;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: right;
-    list-style-type: none;
-    padding-right: 120px;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  section {
-    height: 100vh;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #section1 {
-    background-color: #f4f4f4;
-  }
-  
-  #section2 {
-    background-color: #e2e2e2;
-  }
-  
-  #section3 {
-    background-color: #ccc;
-  }
-  
-  #section4 {
-    background-color: #aaa;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #393CF9;
+  padding: 40px 0;
+  z-index: 1000; /* Menor que o botão do WhatsApp */
+  width: 100%;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-right: 50px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: yellow;
+}
+
+section {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#section1 {
+  background-color: #0077B8;
+}
+
+#section2 {
+  background-color: #00AACC;
+}
+
+#section3 {
+  background-color: #A6E7F2;
+}
+
+#section4 {
+  background-color: rgb(255, 255, 255);
+}
+
+nav ul li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.whatsapp-button {
+  background-color: rgb(139, 236, 139);
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 3px solid black;
+  position: relative;  /* Garantindo que o botão esteja no fluxo de layout */
+  z-index: 1001;  /* Tornando o botão visível acima de outros elementos */
+}
+
+
+
+.whatsapp-button i {
+  font-size: 22px;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+.whatsapp-button:hover {
+  background-color: black;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0D1B2A;
+  padding: 40px 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-right: 50px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: yellow;
+}
+
+section {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#section1 {
+  background-color: #1B263B;
+}
+
+#section2 {
+  background-color: #415A77;
+}
+
+#section3 {
+  background-color: #778DA9;
+}
+
+#section4 {
+  background-color: rgb(255, 255, 255);
+}
+
+nav ul li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.whatsapp-button {
+  background-color: rgb(139, 236, 139);
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 3px solid black;
+}
+
+.whatsapp-button i {
+  font-size: 22px;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+.whatsapp-button:hover {
+  background-color: black;
+  color: white;
+}
