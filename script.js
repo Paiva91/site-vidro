@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const slides = document.querySelectorAll(".slides .slide");
+const indicators = document.querySelectorAll(".indicator");
 let slideIndex = 0;
 let intervalId = null;
 
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", initializeSlider);
 function initializeSlider() {
   if (slides.length > 0) {
     slides[slideIndex].classList.add("displaySlide");
+    indicators[slideIndex].classList.add("active");
   }
 }
 
@@ -60,7 +62,12 @@ function showSlide(index) {
   slides.forEach(slide => {
     slide.classList.remove("displaySlide");
   });
+  indicators.forEach(indicator => {
+    indicator.classList.remove("active");
+  });
+
   slides[slideIndex].classList.add("displaySlide");
+  indicators[slideIndex].classList.add("active");
 }
 
 function prevSlide() {
@@ -73,3 +80,11 @@ function nextSlide() {
   slideIndex++;
   showSlide(slideIndex);
 }
+
+// Adiciona a funcionalidade de clique nos indicadores
+indicators.forEach(indicator => {
+  indicator.addEventListener('click', () => {
+    slideIndex = parseInt(indicator.getAttribute('data-slide'));
+    showSlide(slideIndex);
+  });
+});
